@@ -24,4 +24,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: my-artifact
-          
+      - name: Display downloaded files
+        run: |
+          echo "Downloaded files:"
+          ls -la .         
