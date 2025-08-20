@@ -2,7 +2,7 @@ name: Deploy App Workflow
 on: workflow_dispatch
 jobs:
     test:
-        runs-on: ubuntu_latest
+        runs-on: ubuntu-latest
         steps:
             - name: Get the Code
               uses: actions/checkout@v3
@@ -11,7 +11,7 @@ jobs:
             - name: Run tests
               run: npm run test              
     build:
-        runs-on: ubuntu_latest
+        runs-on: ubuntu-latest
         steps:
             - name: Get the Code
               uses: actions/checkout@v3
