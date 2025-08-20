@@ -1,0 +1,23 @@
+name: Deploy App Workflow
+on: workflow_dispatch
+jobs:
+    test:
+        runs-on: ubuntu_latest
+        steps:
+            - name: Get the Code
+              uses: actions/checkout@v3
+            - name: Install the dependencies
+              run: npm install ci            
+            - name: Run the npm tests
+              run: npm run test              
+            - name: Run the npm tests
+              run: npm run test
+    build:
+        runs-on: ubuntu_latest
+        steps:
+            - name: Get the Code
+              uses: actions/checkout@v3
+            - name: Install the dependencies
+              run: npm install ci             
+            - name: Run the npm tests
+              run: npm run build        
