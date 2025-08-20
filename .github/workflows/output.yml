@@ -11,6 +11,6 @@ jobs:
           echo "Job Context:"
           echo "${{ toJson(job) }}"
           echo "Step Context:"
-          echo "${{ toJson(step) }}"
+          echo "${{ toJson(steps) }}"
           echo "Runner Context:"
           echo "${{ toJson(runner) }}"
