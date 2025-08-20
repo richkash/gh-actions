@@ -1,0 +1,22 @@
+name: Triggers Workflow
+on:
+    push:
+      branches:
+        - trigger-branch
+    workflow_dispatch:
+jobs:
+  trigger_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Triggered by Branch Push or Manual Dispatch
+        run: echo "This workflow was triggered by a push to 'trigger-branch' or manually dispatched."
+      - name: Display Workflow Context
+        run: |
+          echo "Workflow Context:"
+          echo "${{ toJson(github) }}"
+          echo "Job Context:"
+          echo "${{ toJson(job) }}"
+          echo "Step Context:"
+          echo "${{ toJson(steps) }}"
+          echo "Runner Context:"
+          echo "${{ toJson(runner) }}"
