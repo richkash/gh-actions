@@ -1,0 +1,16 @@
+name: Display Output Workflow Context
+on: workflow_dispatch
+jobs:
+  display_output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Workflow Context
+        run: |
+          echo "Workflow Context:"
+          echo "${{ toJson(github) }}"
+          echo "Job Context:"
+          echo "${{ toJson(job) }}"
+          echo "Step Context:"
+          echo "${{ toJson(step) }}"
+          echo "Runner Context:"
+          echo "${{ toJson(runner) }}"
