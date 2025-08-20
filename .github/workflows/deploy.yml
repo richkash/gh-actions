@@ -1,8 +1,5 @@
 name: Deploy App Workflow
-on: 
-    pull_request:
-        branches:
-            - trigger-branch
+on: workflow_dispatch
 jobs:
     test:
         runs-on: ubuntu-latest
